@@ -265,7 +265,7 @@ function addTasksToGoogleTasks_(asanaTasks) {
   }
 
   asanaTasks.forEach(asanaTask => {
-    let taskTitle = `[Asana] ${asanaTask.name || '名称未設定タスク'}`;
+    let taskTitle = asanaTask.name || '名称未設定タスク';
     const asanaDueDateSuffix = formatAsanaDueDateForTitle_(asanaTask.due_on, asanaTask.due_at);
     if (asanaDueDateSuffix) {
       taskTitle += ` ${asanaDueDateSuffix}`;
